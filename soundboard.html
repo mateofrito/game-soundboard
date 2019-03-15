@@ -1,13 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>JS Drum Kit</title>
-  <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Lora|Oswald" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+        <link rel="manifest" href="/favicons/site.webmanifest">
+        <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#fb7834">
+        <link rel="shortcut icon" href="/favicons/favicon.ico">
+        <meta name="msapplication-TileColor" content="#fb7834">
+        <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="JavaScript" href="carousel.js"></link>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href ="layoutsoundboard.css">
+<title>MATT FRY DOT IO</title>
+
+  
 </head>
 <body>
-
-
+        <header>
+                <div class="topnav" id="myTopnav">
+                  <a href="http://mattfry.io" class="frylogo"><img src="http://mattfry.io/images/friestransparent.png" width="45"/></a>
+                  
+                  <a class="link"  href="http:/mattfry.io/retrogames.html"><i class="fas fa-gamepad"></i> RETRO GAMES</a>
+                  <a class="links" href="http://mattfry.io/personal.html"><i class="fas fa-book-open"></i> BIO</a>
+                  
+                  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <img src="http://mattfry.io/images/fryburger.png" width="45"></i>
+                  </a>
+                </div>
+        </header>
+    <div class="mariologocontainer"></div>
+        <img  class="mariologo" src="./images/mariosoundboard.png"></img>
+    </div>
   <div class="keys">
     <div data-key="65" class="key">
             <img id="block" class ="block" src ="./images/mario3box.gif"></img>
@@ -58,6 +88,8 @@
   <audio data-key="75" src="retrowavs/smb3_vine.wav"></audio>
   <audio data-key="76" src="retrowavs/smb3_enter_level.wav"></audio>
 
+
+  <script type="text/javascript" src="carousel.js"></script>
 <script>
   
   function removeTransition(e) {
@@ -68,9 +100,10 @@
   }
 
   function changeBlock(e){
+      //evaluates which data-key div was pressed then evaluates the img element inside of the data-key div
         const elem = document.querySelector(`[data-key="${e.keyCode}"] img`);
-        console.log(elem.src)
-        if (elem.src == 'file:///Users/matthewfry/Documents/game-soundboard/images/mario3box.gif'){
+        console.log(elem.src) //outputs the element link in the console
+        if (elem.src == 'http://mattfry.io/game-soundboard/images/mario3box.gif'){
             elem.src='./images/mario3boxempty.png';
         } else {
             elem.src='./images/mario3box.gif';

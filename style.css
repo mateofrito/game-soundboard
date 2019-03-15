@@ -1,6 +1,6 @@
 html {
   font-size: 10px;
-  background: url(./mario3.jpg) bottom center;
+  background: url(./mario3.jpg) center;
   background-size: cover;
 }
 
@@ -13,7 +13,7 @@ body,html {
 .keys {
   display: flex;
   flex: 1;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   align-items: center;
   justify-content: center;
 }
@@ -31,6 +31,11 @@ body,html {
   background: rgba(0,0,0,0.4);
   text-shadow: 0 0 .5rem black;
 }
+.mariologo{
+  display: block;
+  margin: 0 auto;
+}
+
 
 .playing {
   transform: scale(1.1);
