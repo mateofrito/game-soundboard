@@ -27,7 +27,7 @@
                 <div class="topnav" id="myTopnav">
                   <a href="http://mattfry.io" class="frylogo"><img src="http://mattfry.io/images/friestransparent.png" width="45"/></a>
                   
-                  <a class="link"  href="http:/mattfry.io/retrogames.html"><i class="fas fa-gamepad"></i> RETRO GAMES</a>
+                  <a class="links"  href="http://mattfry.io/retrogames.html"><i class="fas fa-gamepad"></i> RETRO GAMES</a>
                   <a class="links" href="http://mattfry.io/personal.html"><i class="fas fa-book-open"></i> BIO</a>
                   
                   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -36,12 +36,19 @@
                 </div>
         </header>
     <div class="mariologocontainer"></div>
-        <img  class="mariologo" src="./images/mariosoundboard.png"></img>
+        <img  class="mariologo" src="./images/mariosoundboard.png">
+    </img>
+    <h2 class="homerow">Press any key in the home row</h2>
+    <button class="keyboard" id="openKeyboard">Open Keyboard</button>
+<input id="hiddenInput" style="visibility: hidden;">
+    
     </div>
+   
+   
   <div class="keys">
     <div data-key="65" class="key">
             <img id="block" class ="block" src ="./images/mario3box.gif"></img>
-      <!-- <span class="sound">clap</span> -->
+      <!-- <span class="sound">A/span> -->
     </div>
     <div data-key="83" class="key">
             <img id="block" class ="block" src ="./images/mario3box.gif"></img>
@@ -129,6 +136,13 @@
   keys.forEach(key => key.addEventListener('transitionend', removeTransition));
   window.addEventListener('keydown', playSound);
   window.addEventListener('keydown', changeBlock);
+
+  document.getElementById('openKeyboard').addEventListener('click', function(){
+    var inputElement = document.getElementById('hiddenInput');
+    inputElement.style.visibility = 'visible'; // unhide the input
+    inputElement.focus(); // focus on it so keyboard pops
+    inputElement.style.visibility = 'hidden'; // hide it again
+});
 </script>
 
 
